@@ -139,3 +139,9 @@ open firewall port 9870
 ```
 sudo ufw allow 9870/tcp
 ```
+
+If something wrong, you can look up in logs of hadoop
+```
+sudo find / -type d -name "logs"
+/usr/local/hadoop/logs
+```
