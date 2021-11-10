@@ -145,3 +145,41 @@ If something wrong, you can look up in logs of hadoop
 sudo find / -type d -name "logs"
 /usr/local/hadoop/logs
 ```
+
+
+## Step 8: Install yarn
+On master vps (hadoop user)
+```
+export HADOOP_HOME="/usr/local/hadoop"
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_YARN_HOME=$HADOOP_HOME
+```
+
+on each slave
+```
+vi /usr/local/hadoop/etc/hadoop/yarn-site.xml
+ <property>
+   <name>yarn.resourcemanager.hostname</name>
+   <value>srv001a</value>
+ </property>
+```
+
+On master vps (hadoop user) start yarn (need to stop yarn stop-yarn.sh)
+```
+start-yarn.sh 
+```
+
+
+```
+yarn node -list
+```
+
+## Step 9: Hadoop Web UI
+```
+http://hadoop1.admintome.lab:8088/cluster
+http://149.28.156.113:8088/cluster
+sudo ufw allow 8088/tcp
+```
