@@ -46,7 +46,10 @@ vi /etc/hosts
 :/usr/local/hadoop/bin:/usr/local/hadoop/sbin
 ```
 ```
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/hadoop/bin:/usr/local/hadoop/sbin"                           JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/hadoop/bin:/usr/local/hadoop/sbin"                           
+```
+```
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 ```
 
 ### create hadoop user for all vps
